@@ -1,0 +1,49 @@
+/**search.wxss**/
+.container{
+  padding-bottom: 50rpx;
+}
+.search-error-msg{
+  text-align: center;
+  font-size: 13px;
+  color: #353535;
+  margin-top: 40rpx;
+}
+.instruction{
+  position: fixed;
+  bottom: 0;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 100%;
+  background: white;
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+}
+.item{
+  padding: 20rpx 40rpx;
+  display: flex;
+  align-items: center;
+}
+.item-no{
+ margin-right: 30rpx;
+ color: #353535;
+}
+.item-content{
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.title{
+  font-size: 17px;
+  color: #353535;
+}
+.artist{
+  font-size: 15px;
+  color: #888;
+}
+.divider{
+  margin: 0 20rpx;
+  height: 1px;
+  background: #f2f2f2;
+}

@@ -1,0 +1,99 @@
+/**music.wxss**/
+.error-msg{
+  text-align: center;
+  font-size: 13px;
+  color: #353535;
+  margin-top: 40rpx;
+}
+.content{
+  padding-bottom: 150rpx;
+}
+.title{
+  text-align: center;
+  margin: 30rpx 0;
+  color: #353535;
+  font-size: 20px;
+}
+.artist{
+  text-align: center;
+  margin-bottom: 30rpx;
+  font-size: 14px;
+  color: #666;
+}
+.meta-wrapper{
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.meta{
+  color: #353535;
+  font-size: 12px;
+}
+.line{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 30rpx 0;
+}
+.comment{
+  width: 100%;
+  background: #eee;
+  text-align: center;
+  font-size: 14px;
+  margin: 20rpx 200rpx 10rpx;
+  padding: 10rpx 0;
+  color: #353535;
+}
+.lyric{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.chord{
+  font-size: 16px;
+  height: 20px;
+  color: #ff6800;
+}
+.char{
+  font-size: 16px;
+  color: #353535;
+  border-bottom: 1px solid white;
+}
+.key-char{
+  border-bottom: 1px solid #353535;
+}
+.space{
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 8px;
+  margin: 0 auto;
+}
+.key-char.space{
+  width: 50%;
+}
+.chorus{
+  border-left: 20rpx solid #eee;
+  border-right: 20rpx solid #eee;
+}
+.tab{
+  width: 300px;
+  height: 65px;
+  /*background: beige;*/
+}
+.rhythm-wrapper{
+  margin: 0 auto;
+  overflow: hidden;
+  overflow-x: auto;
+}
+.rhythm{
+  width: 300px;
+  height: 115px;
+  /*background: beige;*/
+}

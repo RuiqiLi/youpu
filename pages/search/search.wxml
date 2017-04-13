@@ -1,0 +1,17 @@
+<!--search.wxml-->
+<import src="/templates/search.wxml"/>
+<view class="container">
+  <template is="search" data="{{hint:'歌名、歌手名',focusing}}"/>
+  <text class="search-error-msg" hidden="{{!errorMsg}}">{{errorMsg}}</text>
+  <view class="item-wrapper" wx:for="{{list}}" wx:key="link">
+    <view class="item" data-link="{{item.link}}" data-title="{{item.title}}" data-artist="{{item.artist}}" bindtap="onTapItem">
+      <text class="item-no">{{index+1}}</text>
+      <view class="item-content">
+        <text class="title">{{item.title}}</text>
+        <text class="artist">{{item.artist}}</text>
+      </view>
+    </view>
+    <view class="divider"></view>
+  </view>
+  <text class="instruction">欢迎使用「尤谱」 乐谱来源于互联网</text>
+</view>

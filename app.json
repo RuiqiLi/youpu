@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/search/search",
+    "pages/music/music"
+  ],
+  "window":{
+    "navigationBarBackgroundColor":"#373b3e",
+    "navigationBarTextStyle":"white",
+    "navigationBarTitleText":"尤谱"
+  }
+}

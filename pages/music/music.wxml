@@ -1,0 +1,38 @@
+<!--music.wxml-->
+<view class="container">
+  <text class="title">{{title}}</text>
+  <text class="artist">{{artist}}</text>
+  <text class="error-msg" hidden="{{!errorMsg}}">{{errorMsg}}</text>
+  <view class="content">
+    <view class="meta-wrapper">
+      <text class="meta" wx:for="{{meta}}" wx:key="">{{item}}</text>
+    </view>
+    <view wx:for="{{content}}" wx:for-item="line" wx:key="" class="{{line.lineType == 'CHORUS' ? 'chorus' : 'line'}}">
+      <text wx:if="{{line.lineType == 'COMMENT'}}" class="comment">{{line.value}}</text>
+      <view wx:if="{{line.lineType == 'LYRIC'}}" wx:for="{{line.value}}" wx:key="" class="lyric">
+        <text class="chord">{{item.chord}}</text>
+        <text wx:if="{{item.chord.length > 0 && item.char == '空格'}}" class="char key-char space">{{item.char}}</text>
+        <text wx:elif="{{item.chord.length > 0 && item.char != '空格'}}" class="char key-char">{{item.char}}</text>
+        <text wx:elif="{{item.chord.length == 0 && item.char == '空格'}}" class="char space">{{item.char}}</text>
+        <text wx:else class="char">{{item.char}}</text>
+      </view>
+      <view wx:if="{{line.lineType == 'RHYTHM'}}" class="rhythm-wrapper">
+        <canvas canvas-id="{{line.canvasId}}" class="rhythm" data-canvas-id="{{line.canvasId}}" style="{{(canvasWidth[line.canvasId] ? 'width:' + canvasWidth[line.canvasId] + 'px;' : '')}}"/>
+      </view>
+      <view wx:if="{{line.lineType == 'CHORUS'}}" wx:for="{{line.value}}" wx:for-item="chorusLine" wx:key="" class="line">
+        <text wx:if="{{chorusLine.lineType == 'COMMENT'}}" class="comment">{{chorusLine.value}}</text>
+        <view wx:if="{{chorusLine.lineType == 'LYRIC'}}" wx:for="{{chorusLine.value}}" wx:key="" class="lyric">
+          <text class="chord">{{item.chord}}</text>
+          <text wx:if="{{item.chord.length > 0 && item.char == '空格'}}" class="char key-char space">{{item.char}}</text>
+          <text wx:elif="{{item.chord.length > 0 && item.char != '空格'}}" class="char key-char">{{item.char}}</text>
+          <text wx:elif="{{item.chord.length == 0 && item.char == '空格'}}" class="char space">{{item.char}}</text>
+          <text wx:else class="char">{{item.char}}</text>
+        </view>
+        <view wx:if="{{chorusLine.lineType == 'RHYTHM'}}" class="rhythm-wrapper">
+          <canvas canvas-id="{{chorusLine.canvasId}}" class="rhythm" data-canvas-id="{{chorusLine.canvasId}}" style="{{(canvasWidth[chorusLine.canvasId] ? 'width:' + canvasWidth[chorusLine.canvasId] + 'px;' : '')}}"/>
+        </view>
+      </view>
+      <canvas wx:if="{{line.lineType == 'TAB'}}" canvas-id="{{line.canvasId}}" class="tab"/>
+    </view>
+  </view>
+</view>

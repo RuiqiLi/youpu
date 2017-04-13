@@ -1,0 +1,8 @@
+<template name="search">
+  <view class="search-wrapper">
+    <view class="search" bindtap="onTapSearch">
+      <icon class="search-icon" type="search" size="13"/>
+      <input class="search-input" focus="{{focusing}}" placeholder="{{hint}}" bindinput="onInputSearch" bindconfirm="onConfirmSearch" />
+    </view>
+  </view>
+</template>
